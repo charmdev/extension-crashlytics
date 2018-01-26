@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	
+	
+	<!-- Use the following for an Android Java extension, not needed otherwise -->
+	
+	<dependency name="crashlytics" path="dependencies/android" if="android" />
+	<android extension="org.haxe.extension.Crashlytics" />
+	
+	<section if="ios">		
+		<ndll name="crashlytics" />
+        <dependency path="dependencies/ios/Crashlytics.framework" />
+        <dependency path="dependencies/ios/Fabric.framework" />
+		<ios linker-flags="-ObjC" deployment="6.0" />
+	</section>
+	
+</project>
